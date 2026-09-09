@@ -1,0 +1,22 @@
+# Build outputs
+build/output/
+*.iso
+*.iso.zsync
+*.squashfs
+chroot/
+binary/
+.build/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Virtual environments & caches
+__pycache__/
+*.pyc
+.venv/
+env/
+.pytest_cache/
+
+# Rust artifacts (if any)
+target/
