@@ -1,0 +1,17 @@
+#!/bin/sh
+
+CONFIG="/etc/fiyora/config.yaml"
+
+echo "Fiyora Core starting..."
+
+if [ ! -f "$CONFIG" ]; then
+    echo "ERROR: Fiyora configuration not found: $CONFIG"
+    exit 1
+fi
+
+echo "Fiyora configuration found."
+echo "Fiyora Core initialized."
+
+while true; do
+    sleep 60
+done

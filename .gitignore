@@ -1,22 +1,62 @@
-# Build outputs
-build/output/
-*.iso
-*.iso.zsync
-*.squashfs
-chroot/
-binary/
-.build/
+# Live Build generated files
+build/live/.build/
+build/live/cache/
+build/live/chroot*
+build/live/binary*
+build/live/live-image-*
 
-# OS specific
+# Live Build generated configuration
+build/live/config/binary
+build/live/config/bootstrap
+build/live/config/chroot
+build/live/config/common
+build/live/config/source
+
+# Generated ISO
+*.iso
+
+# Build logs
+*.log
+
+# Editor / OS files
+.vscode/
+.idea/
+*.swp
 .DS_Store
 Thumbs.db
 
-# Virtual environments & caches
-__pycache__/
-*.pyc
-.venv/
-env/
-.pytest_cache/
+# Live Build generated hook symlinks
+build/live/config/hooks/live/0010-*
+build/live/config/hooks/live/0050-*
+build/live/config/hooks/normal/1000-*
+build/live/config/hooks/normal/1010-*
+build/live/config/hooks/normal/1020-*
+build/live/config/hooks/normal/5000-*
+build/live/config/hooks/normal/5010-*
+build/live/config/hooks/normal/5020-*
+build/live/config/hooks/normal/5030-*
+build/live/config/hooks/normal/5040-*
+build/live/config/hooks/normal/5050-*
+build/live/config/hooks/normal/8000-*
+build/live/config/hooks/normal/8010-*
+build/live/config/hooks/normal/8020-*
+build/live/config/hooks/normal/8030-*
+build/live/config/hooks/normal/8040-*
+build/live/config/hooks/normal/8050-*
+build/live/config/hooks/normal/8060-*
+build/live/config/hooks/normal/8070-*
+build/live/config/hooks/normal/8080-*
+build/live/config/hooks/normal/8090-*
+build/live/config/hooks/normal/8100-*
+build/live/config/hooks/normal/8110-*
+build/live/config/hooks/normal/9000-*
 
-# Rust artifacts (if any)
-target/
+# Additional Live Build generated hooks
+build/live/config/hooks/normal/9010-*
+build/live/config/hooks/normal/9020-*
+
+# Generated systemd enablement symlinks
+build/live/config/includes.chroot/etc/systemd/system/default.target
+build/live/config/includes.chroot/etc/systemd/system/getty@tty1.service
+build/live/config/includes.chroot/etc/systemd/system/graphical.target.wants/
+build/live/config/includes.chroot/etc/systemd/system/multi-user.target.wants/

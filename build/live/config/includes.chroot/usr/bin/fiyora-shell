@@ -1,0 +1,26 @@
+#!/bin/sh
+
+CONFIG="/etc/fiyora/config.yaml"
+
+if [ ! -f "$CONFIG" ]; then
+    echo "ERROR: Fiyora configuration not found: $CONFIG"
+    exit 1
+fi
+
+URL=$(sed -n 's/^[[:space:]]*url:[[:space:]]*"\([^"]*\)".*/\1/p' "$CONFIG" | head -n 1)
+
+if [ -z "$URL" ]; then
+    echo "ERROR: Application URL not configured"
+    exit 1
+fi
+
+echo "Starting Fiyora Shell..."
+echo "Application: $URL"
+
+exec cage -- chromium \
+    --kiosk \
+    --no-first-run \
+    --disable-session-crashed-bubble \
+    --disable-infobars \
+    --disable-features=Translate \
+    "$URL"

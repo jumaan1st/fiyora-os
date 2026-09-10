@@ -1,0 +1,24 @@
+[Unit]
+Description=Fiyora OS Shell on %I
+After=systemd-user-sessions.service systemd-logind.service dbus.socket
+Wants=dbus.socket systemd-logind.service
+Conflicts=getty@%i.service
+ConditionPathExists=/dev/tty0
+
+[Service]
+Type=simple
+User=fiyora
+UtmpIdentifier=%I
+UtmpMode=user
+TTYPath=/dev/%I
+TTYReset=yes
+TTYVHangup=yes
+TTYVTDisallocate=yes
+StandardInput=tty-fail
+PAMName=cage
+ExecStart=/usr/bin/fiyora-shell
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=graphical.target

@@ -1,0 +1,7 @@
+NAME="Fiyora OS"
+PRETTY_NAME="Fiyora OS"
+ID=fiyora
+ID_LIKE=debian
+VERSION="0.1"
+VERSION_ID="0.1"
+HOME_URL="https://github.com/jumaan1st/fiyora-os"

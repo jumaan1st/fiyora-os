@@ -1,0 +1,11 @@
+#!/bin/sh
+
+lb config \
+    --distribution trixie \
+    --architectures amd64 \
+    --binary-images iso-hybrid \
+    --bootappend-live "boot=live components username=fiyora" \
+    --iso-application "Fiyora OS" \
+    --iso-volume "FIYORA_OS" \
+    --iso-publisher "Fiyora Open Source Project" \
+    --iso-preparer "Fiyora Build System"

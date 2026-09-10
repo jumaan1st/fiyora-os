@@ -1,0 +1,13 @@
+[Unit]
+Description=Fiyora OS Core
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/fiyora-core
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

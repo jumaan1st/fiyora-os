@@ -1,0 +1,26 @@
+application:
+  name: "Fiyora Application"
+  url: "https://app.fiyoralabs.in"
+
+display:
+  fullscreen: true
+
+network:
+  enabled: true
+  wifi: true
+  ethernet: true
+
+printer:
+  enabled: true
+
+bluetooth:
+  enabled: true
+
+audio:
+  enabled: true
+
+camera:
+  enabled: true
+
+security:
+  allowOnlyApplication: true

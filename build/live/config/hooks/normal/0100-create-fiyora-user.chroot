@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+if ! id fiyora >/dev/null 2>&1; then
+    useradd \
+        --create-home \
+        --home-dir /home/fiyora \
+        --shell /bin/bash \
+        --groups audio,video,input,render \
+        fiyora
+fi
